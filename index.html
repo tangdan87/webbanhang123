@@ -8,6 +8,11 @@
 
 	<link rel="stylesheet" href="styles.css">
 
+
+	<script type="text/javascript">
+		var mangPara = [];
+	</script>
+
 	<script> 
 		//========load file ================
     	function loadfiiles(){
@@ -19,6 +24,9 @@
 	     			 $(this).load(file);
 	    		});
     		});
+    		$("#menus").load("menu.html");
+    		$("#menus").load("menu.html"); 
+    		alert(1);
     	}
     	loadfiiles();
 
@@ -69,15 +77,22 @@
     		});
     	}
 
-    	function test1(){
+    	function test1(index){
     		var dem = 0;
     		var mang = [];
+    		
+			
     		
     		$(document).ready( function() {
     			
     			$(function() {
+    				$("#menus").load("menu.html"); 
     				
-    				data.items.forEach(function(item) {
+
+
+
+    				mang.push(data,data1,data2);
+    				mang[index].items.forEach(function(item) {
     					dem += 1;
     					// alert(1);
     					// var para = document.createElement("img");
@@ -95,7 +110,7 @@
 		       			
 
 		       			var para = document.createElement("div");
-		       			mang.push(para);
+		       			mangPara.push(para);
 		       			var id = "someimgID"+dem;
 		            	para.id = id;
 		            	para.className = "someimgID";
@@ -123,20 +138,22 @@
 
     		});
     	}
-    	test1();
+    	test1(0);
+
     	
     </script>
 
 </head>
 <body>
 	<div id="contents"></div>
+	<div id="menus"></div>
 	<div data-include="sanphamitem" ></div>
 	<div data-include="sanphamitem" ></div>
 	<div data-include="sanphamitem" id="nd1" ></div>
 	<div data-include="sanphamitem" ></div>
 
 	<script type="text/javascript">
-		alert(1);
+		// alert(1);
 		function addItems(){
 			alert(1);
 			$(document).ready( function() {
@@ -233,7 +250,30 @@
 			                    "price": "185,000₫"
 			                }
                 		] 
-                	}
+                	};
+        var data1 = {
+                "items": [
+			                {
+			                    "linkimg": "https://product.hstatic.net/1000123703/product/km1_27a622ac505244f0bf42e1684eb0c404_medium.jpg",
+			                    "lname": "Nước xả vải AZUMA đậm đặc 3.2L (Hương lavender)",
+			                    "price": "160,000₫"
+			                },
+			              ]
+			        };
+		var data2 = {
+                "items": [
+			                {
+			                    "linkimg": "https://product.hstatic.net/1000123703/product/km1_27a622ac505244f0bf42e1684eb0c404_medium.jpg",
+			                    "lname": "Nước xả vải AZUMA đậm đặc 3.2L (Hương lavender)",
+			                    "price": "160,000₫"
+			                },
+			                {
+			                    "linkimg": "https://product.hstatic.net/1000123703/product/ngx_sawady_golden_fresh_bb021df2f8ea4ba9845145acea598fc7_medium.jpg",
+			                    "lname": "Nước giặt xả Sawady 6 trong 1 (Golden Fresh) 3,8L",
+			                    "price": "185,000₫"
+			                }
+			              ]
+			        };
     </script>
 
 </body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.btnMenu{
+			width: 98%;
+			height: 50px;
+			/*margin: auto;*/
+		}
+		.btnMenu:hover{
+			border: 1px ;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<p>123</p>
+	<button class="btnMenu" onclick="showMangSp(0)" id="btnMenu1">sản phẩm phổ biến</button><br/>
+	<button class="btnMenu" onclick="showMangSp(1)">đồ điện tử</button><br/>
+	<button class="btnMenu" onclick="showMangSp(2)">mỹ phẩm</button><br/>
+	<button class="btnMenu">san pham 1</button>
+
+	<script type="text/javascript">
+		function showMangSp(index){
+
+			// var i;
+			// for (i = 0; i < mangPara.length; i++) { 
+			//   // alert(mangPara.length);
+			//   mangPara[i].remove();
+			// }
+			//  test1(1);
+
+
+			// alert(mangPara.length);
+			mangPara.forEach(function(item) {
+			
+    			item.remove();
+    		});
+    		test1(index);
+
+    				
+		}
+	</script>
+
+</body>
+</html>

@@ -18,6 +18,18 @@
 	background-color: green;
 	overflow: hidden;
 }
+
+#menus{
+	position: absolute;
+	top: 12px;
+	right: 16px;
+	width: 368px;
+	height: 568px;
+
+	
+	/*float: right;*/
+	background-color: red;
+}
 /*#foo{
 	background-color: green;
 	overflow: hidden;
